@@ -8,10 +8,10 @@ public class CoinTest {
     @Test
     public void testIfProbabilityOfHeadsAndTailsInACoinTossAreEqual(){
         Coin coin = new Coin();
-        double headProbability=0.5;
-        double tailProbability=0.5;
+        double headProbability=coin.getProbability(Coin.coinFace.Heads);
+        double tailProbability=coin.getProbability(Coin.coinFace.Tails);
 
-        boolean actualValue=coin.isEqual(headProbability,tailProbability);
+        boolean actualValue=coin.checkIfProbabilitiesAreEqual(headProbability,tailProbability);
 
         assertTrue(actualValue);
     }
