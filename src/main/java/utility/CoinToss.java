@@ -1,6 +1,7 @@
 package utility;
 
 public class CoinToss {
+
     public enum CoinFace {
         Heads(0.5), Tails(0.5);
 
@@ -26,5 +27,9 @@ public class CoinToss {
             return new CoinProbability(this.coinFace.probability * toss.coinFace.probability);
         else
             return new CoinProbability(this.coinFace.probability);
+    }
+
+    public CoinProbability probabilityOfAnEventNotOccurring() {
+        return new CoinProbability(1-this.coinFace.probability);
     }
 }

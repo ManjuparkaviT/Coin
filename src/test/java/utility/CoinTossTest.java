@@ -38,4 +38,14 @@ public class CoinTossTest {
 
         assertEquals(expectedProbability,actualProbability);
     }
+
+    @Test
+    public void testIfProbabilityOfTailTossWhichIsNotOccurringIsHalf(){
+        CoinToss headToss = new CoinToss(CoinToss.CoinFace.Heads);
+        CoinProbability expectedProbability=new CoinProbability(0.5);
+
+        CoinProbability actualProbability=headToss.probabilityOfAnEventNotOccurring();
+
+        assertEquals(expectedProbability,actualProbability);
+    }
 }
