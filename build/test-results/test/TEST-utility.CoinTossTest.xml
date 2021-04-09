@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="utility.CoinTossTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-08T07:23:07" hostname="LAPTOP-GFK8P9AB" time="0.182">
+<testsuite name="utility.CoinTossTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-04-09T06:39:56" hostname="LAPTOP-GFK8P9AB" time="0.386">
   <properties/>
-  <testcase name="testIfProbabilityIsOneFourthForJointProbabilityOfHeadAndTailToss()" classname="utility.CoinTossTest" time="0.1"/>
-  <testcase name="testIfProbabilityOfHeadsAndTailsInACoinTossAreEqual()" classname="utility.CoinTossTest" time="0.037"/>
+  <testcase name="testIfProbabilityIsHalfForEventOfHeadAndTailTossOccurringTogether()" classname="utility.CoinTossTest" time="0.287"/>
+  <testcase name="testIfProbabilityIsOneFourthForEventOfHeadAndHeadTossOccurringTogether()" classname="utility.CoinTossTest" time="0.084"/>
+  <testcase name="testIfProbabilityOfHeadsAndTailsInACoinTossAreEqual()" classname="utility.CoinTossTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

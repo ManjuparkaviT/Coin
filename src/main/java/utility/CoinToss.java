@@ -1,27 +1,30 @@
 package utility;
 
 public class CoinToss {
-    public enum coinFace {
+    public enum CoinFace {
         Heads(0.5), Tails(0.5);
 
         private final double probability;
 
-        coinFace(double probability) {
+        CoinFace(double probability) {
             this.probability = probability;
         }
     }
 
-    coinFace coinSide;
+    CoinFace coinFace;
 
-    public CoinToss(coinFace coinSide) {
-        this.coinSide=coinSide;
+    public CoinToss(CoinFace coinFace) {
+        this.coinFace = coinFace;
     }
 
     public CoinProbability getProbability() {
-        return new CoinProbability(this.coinSide.probability);
+        return new CoinProbability(this.coinFace.probability);
     }
 
-    public CoinProbability getJointProbability(CoinToss toss) {
-        return new CoinProbability(this.coinSide.probability * toss.coinSide.probability);
+    public CoinProbability probabilityOfEventsOccurringTogether(CoinToss toss) {
+        if(this.coinFace==toss.coinFace)
+            return new CoinProbability(this.coinFace.probability * toss.coinFace.probability);
+        else
+            return new CoinProbability(this.coinFace.probability);
     }
 }
